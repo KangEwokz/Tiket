@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran Tiket KAI</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">KAI Tickets</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../../Page/Dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="booking.html">Pemesanan Tiket</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../Page/index.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Pembayaran Tiket KAI</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Informasi Pembayaran</h2>
+                        <p>Silakan lengkapi informasi pembayaran di bawah ini untuk menyelesaikan pemesanan Anda.</p>
+                        <form action="#" method="POST">
+                            @csrf
+                            <div class="form-group">
+                                <label for="card-number">Nomor Kartu Kredit:</label>
+                                <input type="text" id="card-number" name="card_number" class="form-control" value="1234 5678 9876 5432" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="expiration-date">Tanggal Kadaluarsa:</label>
+                                <input type="text" id="expiration-date" name="expiration_date" class="form-control" value="12/25" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV:</label>
+                                <input type="text" id="cvv" name="cvv" class="form-control" value="123" required>
+                            </div>
+                            <center>
+                                <a href="BookingComplete.html" type="submit" class="btn btn-primary">Bayar Sekarang</a>
+                                <a href="../../Page/index.html" class="btn btn-danger">Batalkan</a>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

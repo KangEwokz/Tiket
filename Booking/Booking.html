@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Tiket KAI</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">KAI Tickets</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../../Page/Dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="booking.html">Pemesanan Tiket</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../Page/index.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Pemesanan Tiket KAI</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Pemesanan Tiket Kereta Api</h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="BookingConfirm.html">
+                            <div class="form-group">
+                                <label for="from">Dari:</label>
+                                <input type="text" id="from" name="from" class="form-control" value="Jakarta" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="to">Ke:</label>
+                                <input type="text" id="to" name="to" class="form-control" value="Bandung" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="departure-date">Tanggal Keberangkatan:</label>
+                                <input type="date" id="departure-date" name="departure-date" class="form-control" value="2024-09-15" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="passengers">Jumlah Penumpang:</label>
+                                <input type="number" id="passengers" name="passengers" class="form-control" value="2" min="1" required>
+                            </div>
+                            <center>
+                                <button type="submit" class="btn btn-primary">Cari Tiket</button>
+                                <a href="../../Page/index.html" class="btn btn-danger">Batalkan</a>
+                            </center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
